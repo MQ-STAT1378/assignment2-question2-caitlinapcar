@@ -5,7 +5,7 @@ Multiserver <- function(Arrivals, ServiceTimes, NumServers = 1) {
   if (length(Arrivals) != length(ServiceTimes)){
     stop("Arrivals and ServiceTimes must have the same length")
   }
-# Feed customers through a multiserver queue system to determine each  
+# Feed customers through a multiserver queue system to determine each
 # customer's transition times.
 
 NumCust = length(Arrivals)  #  number of customer arrivals
@@ -14,7 +14,7 @@ AvailableFrom <- rep(0, NumServers)
 # i.e., when the nth server will next be available
 
 # These variables will be filled up as the simulation proceeds:
-ChosenServer <- ServiceBegins <- ServiceEnds <- rep(0, NumCust)  
+ChosenServer <- ServiceBegins <- ServiceEnds <- rep(0, NumCust)
 
 # ChosenServer = which server the ith customer will use
 # ServiceBegins = when the ith customer's service starts
@@ -27,7 +27,7 @@ for (i in seq_along(Arrivals)){
   ChosenServer[i] <- which.min(AvailableFrom)
   # service begins as soon as server & customer are both ready
   ServiceBegins[i] <- max(avail, Arrivals[i])
-  ServiceEnds[i] <- ServiceBegins[i] + ServiceTimes[i]  
+  ServiceEnds[i] <- ServiceBegins[i] + ServiceTimes[i]
   # server becomes available again after serving ith customer
   AvailableFrom[ChosenServer[i]] <- ServiceEnds[i]
 }
