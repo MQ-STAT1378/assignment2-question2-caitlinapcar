@@ -1,13 +1,15 @@
 Package: assignment2-question2-caitlinapcar
-Title: What the Package Does (One Line, Title Case)
+Title: Multiserver - Bank Queuing, Determined by Fate?
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Caitlin",
+           family = "Apcar",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "caitlin.apcar@students.mq.edu.au",
+           )
+Description: This package simulates how customers in a bank will go through a "first come, first
+serve" queing system as logn as "fate" has already decided which when each customer will
+arrive and their service times.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
