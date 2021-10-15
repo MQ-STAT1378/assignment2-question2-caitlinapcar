@@ -7,9 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "caitlin.apcar@students.mq.edu.au",
            )
-Description: This package simulates how customers in a bank will go through a "first come, first
-serve" queing system as logn as "fate" has already decided which when each customer will
-arrive and their service times.
+Description: This package simulates how customers in a bank will go through a "first come, first serve" queing system as logn as "fate" has already decided which when each customer will arrive and their service times.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
