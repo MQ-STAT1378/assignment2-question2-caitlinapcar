@@ -15,3 +15,12 @@ The package takes into account “predetermined factors”; the arrival time
 and length of the service in conjunction with how many bank tellers are
 working to produce a final result of how long a customer would be
 waiting in line.
+
+## Attempted Tasks:
+
+-   Correct R package structure
+-   Appropriate documentation
+-   Implement `testthat`
+-   Use `Git` and `GitHub` correctly
+-   Implemented `tibble`
+-   Added provided dataset with documentation.

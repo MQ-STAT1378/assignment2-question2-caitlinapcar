@@ -21,10 +21,14 @@ The goal of this project is to create a package "Multiserver" that can generate 
 
 The package takes into account "predetermined factors"; the arrival time and length of the service in conjunction with how many bank tellers are working to produce a final result of how long a customer would be waiting in line. 
 
-An example of the type of output the package can produce can be seen below:
-```{r}
-head(Multiserver(Arrivals = bank$arrival_time, ServiceTimes = bank$service_time, 3))
 
-```
+## Attempted Tasks:
+
+* Correct R package structure
+* Appropriate documentation
+* Implement `testthat`
+* Use `Git` and `GitHub` correctly
+* Implemented `tibble`
+* Added provided dataset with documentation. 
 
 
