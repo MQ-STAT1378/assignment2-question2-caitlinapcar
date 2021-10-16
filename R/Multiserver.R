@@ -12,6 +12,7 @@
 #' @export
 #'
 #' @examples Multiserver(Arrivals = bank$arrival_time, ServiceTimes = bank$service_time, 5)
+
 Multiserver <- function(Arrivals, ServiceTimes, NumServers = 1) {
   if (any(Arrivals <= 0 | ServiceTimes <= 0) || NumServers <= 0){
     stop("Arrivals, ServiceTimes must be positive & NumServers must be positive" )
@@ -45,7 +46,7 @@ Multiserver <- function(Arrivals, ServiceTimes, NumServers = 1) {
     # server becomes available again after serving ith customer
     AvailableFrom[ChosenServer[i]] <- ServiceEnds[i]
   }
-  out <- data.frame(Arrivals, ServiceBegins, ChosenServer, ServiceEnds)
+  out <- tibble::tibble(Arrivals, ServiceBegins, ChosenServer, ServiceEnds)
   return(out)
 }
 
