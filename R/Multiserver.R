@@ -1,3 +1,17 @@
+#' Multiserver
+#'
+#' @description Simulates how customers in line at the bank go through a
+#' "first come first serve" queuing system as long as their arrival and service times have already been predetermined.
+#' @param Arrivals Number of Customer Arrivals
+#' @param ServiceTimes How long a customer's service takes.
+#' @param NumServers The number of servers currently working. This will always be
+#' an integer.
+#'
+#' @return Either a table or single tuple containing the arrivals, service start/end time
+#' and the number of servers
+#' @export
+#'
+#' @examples Multiserver(Arrivals = bank$arrival_time, ServiceTimes = bank$service_time, 5)
 Multiserver <- function(Arrivals, ServiceTimes, NumServers = 1) {
   if (any(Arrivals <= 0 | ServiceTimes <= 0) || NumServers <= 0){
     stop("Arrivals, ServiceTimes must be positive & NumServers must be positive" )
